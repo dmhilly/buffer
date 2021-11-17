@@ -19,7 +19,7 @@ type memory struct {
 func New(n int64) BufferAt {
 	return &memory{
 		N:      n,
-		Buffer: bytes.NewBuffer(nil),
+		Buffer: bytes.NewBuffer(make([]byte, 0, n)),
 	}
 }
 
